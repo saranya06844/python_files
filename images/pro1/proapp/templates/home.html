@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>saw</title>
+</head>
+<body>
+<h1>hello</h1>
+{% for img in images %}
+<p>{{img.name}}</p>
+<img src="{{img.images.url}}">
+
+{% endfor %}
+</body>
+</html>

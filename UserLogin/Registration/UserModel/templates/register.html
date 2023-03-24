@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+{%load crispy_forms_tags %}
+<head>
+    <meta charset="UTF-8">
+    <title>saw</title>
+    <style>
+        .submit {margin-top:20px}
+
+    </style>
+</head>
+<body>
+<form method="POST">
+    {% csrf_token %}
+    {{ form|crispy }}
+    <!--{% for form in form %}
+    <p>{{form.label}}: <span>{{form}}</span></p>
+
+    {% endfor %}-->
+
+    <input type="submit" value="Submit" class="submit">
+</form>
+</body>
+</html>

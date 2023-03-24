@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>saranya</title>
+</head>
+<body>
+    <!--javascript-->
+    <button onclick="show()">Click Me</button>
+    <script>
+        //function inside js
+        function show(){
+            
+            //function decalre from another function
+            display()
+
+            //output declaration
+            console.log("hello world")
+
+            
+            //variable declaration
+            var a=1;
+            var b=2
+            var sum=a+b
+            console.log('sum='+sum)
+            var c=4;
+            var c=6;
+            console.log(c)
+
+            //let declaration(type of variable)
+            let d=7
+            d=8
+            console.log(d)
+
+            //constant declaration
+            const ca='car'
+            
+            console.log(ca)
+
+            //IF statement decalration
+            if(d%2==0){
+                console.log('Number is even')
+            }
+            else{
+                console.log('no is odd')
+            }
+
+            //loop
+
+            for(var i=0;i<10;i++)
+            {
+                console.log(i)
+            }
+
+            //arrey
+            var fruits=['orange','apple','graphs','strawbarry',9]
+            console.log(fruits)
+            console.log(fruits[2])
+
+            //variable object
+            var person={
+                Name:"saranya",
+                Age:22,
+                Place:"kottayam"
+            }
+            console.log(person)
+            console.log(person.Name)
+
+            //array object
+            var person=[{
+                Name:"saranya",
+                Age:22,
+                Place:"kottayam"
+            },{Name:"shilpa",
+               Age:23,
+               Place:"kottayam"}]
+            console.log(person)
+            console.log(person[1].Name)
+
+            //another function
+            function display(){
+                console.log("hey")
+            }
+        }
+    </script>
+</body>
+</html>

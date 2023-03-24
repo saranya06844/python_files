@@ -1,0 +1,13 @@
+<html>
+{% extends 'base.html' %}
+{% block content %}
+<h1>Add a Student Information</h1>
+<form method="post">
+   <h4>{{form.as_p}}</h4>
+    {% csrf_token %}
+    <a href="#" ><input type="submit" value="Add Student"></a>
+
+</form>
+
+{% endblock %}
+</html>

@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+<!-- title -->
+{% block title %}Register  {% endblock %}
+
+<!-- head -->
+{% block head %}  {% endblock %}
+
+<!-- body -->
+{% block content %}
+<h1>Register here</h1>
+<hr>
+<form method="post">
+
+
+    {% for field in form %}
+        <div>
+            <p>{{ field.label }}: <br> {{ field }}</p>
+
+            {% for error in field.errors %}
+                <small style="color: red">{{ error }}</small>
+            {% endfor %}
+        </div>
+    {% endfor %}
+    {% csrf_token %}
+    <input type="submit" value="submit" ><br>
+    <a href="{% url 'home' %}">Back to home</a>
+</form>
+
+{% endblock %}

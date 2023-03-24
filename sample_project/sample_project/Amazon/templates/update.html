@@ -1,0 +1,16 @@
+<html>
+{% extends 'base.html' %}
+{% block content %}
+<h1>Update a Student Information</h1>
+<form method="post">
+    Student Name   : <input type="text" name="Student_Name" value="{{student.Student_Name}}">
+    Student Rollno : <input type="text" name="Student_RollNo" value="{{student.Student_RollNo}}">
+    Student mark   : <input type="text" name="Student_Mark" value="{{student.Student_Mark}}">
+
+    {% csrf_token %}
+    <a href="#" ><input type="submit" value="update a Student"></a>
+
+</form>
+
+{% endblock %}
+</html>

@@ -1,0 +1,21 @@
+{% extends 'User/base.html' %}
+
+<!-- static -->
+{% load static %}
+
+ <!-- head -->
+ {% block head %}
+
+ <link rel="stylesheet" href="{% static 'css/home.css' %}">
+
+ {% endblock %}
+
+ <!-- body -->
+{% block content %}
+
+  <h1>Welcome to home page</h1>
+  <div>
+  <a href="{% url 'register' %}">register new user</a><br>
+  <a href="{% url 'logout' %}">Logout</a>
+  </div>
+{% endblock %}

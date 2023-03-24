@@ -1,0 +1,24 @@
+{% extends 'details/base.html' %}
+{% block content %}
+<div class="container">
+    <div class="row">
+        
+        <div class="col-lg-4 ">
+            <div class="card" style="width: 45rem;">
+                <div class="card-body" style="background-color:azure;">
+                    <h1 class="card-tittle"><i>{{ object.name }}</i></h1><br>
+                    <h3>{{ object.class }}</h3>
+                    <h3>{{ object.Reg_no }}</h3>
+                    <p>{{ object.Stu_Address }}</p>
+                    <h6>{{ object.Phone_no }}</h6>
+                    <h6>{{ object.Email_id }}</h6><br>
+                    <a href="{% url 'studentupdate' object.id %}" class="btn btn-success">Update</a>
+                    <a href="{% url 'studentdelete' object.id %}" class="btn btn-success">Delete</a>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

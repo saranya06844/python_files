@@ -1,0 +1,25 @@
+{% extends 'User/base.html' %}
+
+
+
+<!-- static -->
+{% load static %}
+
+ <!-- head -->
+ {% block head %}
+
+ <link rel="stylesheet" href="{% static 'css/login.css' %}">
+
+ {% endblock %}
+
+ <!-- body -->
+{% block content %}
+
+
+  <form action="{% url 'login' %}" method="post">
+    {{form.as_p}}
+    {% csrf_token %}
+    <input type="submit" value="submit" class="input">
+  </form>
+  
+{% endblock %}

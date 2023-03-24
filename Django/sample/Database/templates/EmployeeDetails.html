@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>saranya</title>
+    </head>
+    <body>
+        <h1>Welcome to database table</h1>
+        <table style="border: solid black;">
+            {% if employee_list %}
+            {% for employee in employee_list %}
+            <tr>
+                <td style="border: solid black;">{{employee.Employee_no}}</td>
+                <td style="border: solid black;">{{employee.Employee_name}}</td>
+                <td style="border: solid black;">{{employee.Employee_Salary}}</td>
+                <td style="border: solid black;">{{employee.Employee_Address}}</td>
+            </tr>
+            {% endfor %}
+            {% endif %}
+        </table>
+    </body>
+</html>

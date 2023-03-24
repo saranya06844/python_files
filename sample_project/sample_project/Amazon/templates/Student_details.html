@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Maria College</title>
+    <style>
+        th,td,table {
+        border:solid black 2px;
+        }
+    </style>
+</head>
+<body>
+<h1>Student Details</h1>
+<table>
+    {% if Student_list %}
+
+    <tr>
+        <th>Student_RollNo</th>
+        <th>Student_Name</th>
+        <th>Student_Mark</th>
+    </tr>
+    {% for Student in Student_list %}
+    <tr>
+        <td>{{Student.Student_RollNo}}</td>
+        <td>{{Student.Student_Name}}</td>
+        <td>{{Student.Student_Mark}}</td>
+    </tr>
+    {% endfor %}
+    {% endif %}
+
+
+</table>
+
+</body>
+</html>

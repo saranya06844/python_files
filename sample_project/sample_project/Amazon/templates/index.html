@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<table>
+    <tr>
+        <th>Student_Rollno</th>
+        <th>Student_Name</th>
+        <th>Student_Mark</th>
+    </tr>
+    {% for sd in student %}
+    <tr>
+
+        <td>{{sd.Student_RollNo}}</td>
+        <td>{{sd.Student_Name}}</td>
+        <td>{{sd.Student_Mark}}</td>
+        <td><a href="/Amazon/update/{{sd.id}}/" type="button" >update</a></td>
+        <td><a href="/Amazon/delete/{{sd.id}}/" type="button" >delete</a></td>
+
+
+    </tr>
+     {% endfor %}
+   </table>
+
+
+
+<a href="/Amazon/update/" ><button type="button">Add new button</button></a>
+
+{% endblock %}
